@@ -1,0 +1,18 @@
+<p>payments works!</p>
+
+
+<h2>Collection Payment Intent</h2>
+<div class="container">
+  <div [formGroup]="stripeTest">
+    <input formControlName="name" />
+    <input formControlName="amount" />
+    <ngx-stripe-card
+      [options]="cardOptions"
+      [elementsOptions]="elementsOptions"
+    ></ngx-stripe-card>
+    <button type="submit" (click)="pay()">
+      PAY
+    </button>
+  </div>
+  
+</div>
